@@ -19,18 +19,26 @@ class App extends Component {
       text : '',
       author : ''
     };
-    this.generateQuote = this.generateQuote.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   async generateQuote() {
-    setRandomColor();
     $('#quote-box').slideUp(800);
     await setTextAndAuthor(this);
     $('#quote-box').slideDown(800);
   }
 
+  handleClick() {
+    this.generateQuote();
+    setRandomColor();
+  }
+
   componentWillMount() {
     this.generateQuote();
+  }
+
+  componentDidMount() {
+    setRandomColor();
   }
 
   render() {
@@ -39,7 +47,7 @@ class App extends Component {
       <div className="App">
         <div id="quote-box">
           <Quote text={<p>{this.state.text}</p>} author={this.state.author}/>
-          <QuoteButton onClick={this.generateQuote}/>
+          <QuoteButton onClick={this.handleClick}/>
           <div id="tweet-quote">
             <a href={"https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" + encodeURIComponent(this.state.text + ' ' + this.state.author)}>
               <div className="tweet-button">
