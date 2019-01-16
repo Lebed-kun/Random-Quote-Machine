@@ -1,0 +1,18 @@
+.Quote {
+  font-size: 1.5rem;
+  color: #333;
+  overflow: hidden;
+}
+
+.Quote p {
+  margin: 0;
+}
+
+.Quote-author {
+  font-size: 0.67em;
+  font-style: italic;
+  color: #777;
+  text-align: right;
+
+  margin-top: 0.5rem;
+}

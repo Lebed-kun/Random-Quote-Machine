@@ -1,32 +1,39 @@
+
 .App {
-  text-align: center;
+  background-color: white;
+
+  min-width: 360px;
+  width: 67%;
+  margin: 5rem auto;
+  padding: 1rem 1.5rem;
+
+  border-radius: 10px;
+  -o-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+
+  overflow: hidden;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+#tweet-quote {
+  display: inline-block;
+  float: left;
+
+  margin-top: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#tweet-quote:active {
+  background-color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tweet-button img {
+  box-sizing: border-box;
+  width: 2.33rem;
+  background-color: black;
+
+  padding: 0.33rem;
+
+  border-radius: 5px;
+
 }
